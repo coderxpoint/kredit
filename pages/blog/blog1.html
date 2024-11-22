@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Kredit venture | Blogs</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      body {
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body class="poppins-regular">
+    <!-- header start -->
+
+    <header class="h-auto z-50 w-full shadow-md">
+      <div class="container mx-auto flex justify-between items-center h-full">
+        <!-- Left section: Logo -->
+        <div class="flex items-center lg:mr-12">
+          <a href="/">
+            <img
+              src="/assets/logo.png"
+              alt="Logo"
+              class="h-[5rem] w-auto mr-5"
+            />
+          </a>
+        </div>
+
+        <div class="md:hidden flex flex-row">
+          <div class="flex items-center">
+            <img
+              src="/assets/call1.svg"
+              class="bg-white lg:block hidden bg-white rounded-full"
+              alt=""
+            />
+            <div>
+              <a
+                href="tel:+919967488300"
+                class="text-black hidden lg:block font-semibold items-center rounded inline-block"
+                >+91 99674 88300</a
+              >
+
+              <button
+                class="bg-green-500 ml-20 text-xs p-2 gap-2 rounded-lg flex flex-row items-center"
+              >
+                <img
+                  src="/assets/call.svg"
+                  class="bg-inherit text-white"
+                  alt=""
+                />
+                <a
+                  href="tel:+919967488300"
+                  class="text-white font-bold items-center rounded inline-block"
+                  >Call Us</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hamburger menu (for mobile) -->
+        <div class="flex md:hidden mx-6">
+          <button
+            id="hamburger"
+            class="text-black focus:outline-none"
+            onclick="toggleMenu()"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Center section: Menu (hidden on mobile, visible on desktop) -->
+        <nav
+          id="navMenu"
+          class="hidden w-[50vw] mt-10 lg:flex h-[12vh] justify-center items-center bg-orange-600"
+        >
+          <ul
+            class="flex flex-col md:flex-row justify-center items-center mx-auto lg:px-0 w-full text-white"
+          >
+            <li
+              class="flex-1 text-center border-b md:border-b-0 md:border-r border-white"
+            >
+              <a href="/" class="hover:text-secondary font-bold">Home</a>
+            </li>
+            <li
+              class="flex-1 text-center border-b md:border-b-0 md:border-r border-white"
+            >
+              <a href="/pages/about.html" class="hover:text-secondary font-bold"
+                >About Us</a
+              >
+            </li>
+            <li
+              class="flex-1 text-center border-b md:border-b-0 md:border-r border-white"
+            >
+              <a
+                href="/pages/service.html"
+                class="hover:text-secondary font-bold"
+                >Our Products</a
+              >
+            </li>
+            <li
+              class="flex-1 text-center border-b md:border-b-0 md:border-r border-white"
+            >
+              <a href="/pages/blog.html" class="hover:text-secondary font-bold"
+                >Blogs</a
+              >
+            </li>
+            <li class="flex-1 text-center">
+              <a
+                href="/pages/contact.html"
+                class="hover:text-secondary font-bold"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Right section: Buttons (visible on desktop) -->
+        <div class="hidden mt-10 lg:flex lg:flex-row lg:items-end">
+          <img
+            src="/assets/call1.svg"
+            class="bg-white invert rounded-full p-3"
+            alt=""
+          />
+          <div class="flex flex-col mx-3">
+            <a
+              href="tel:+919967488300"
+              class="text-black font-semibold rounded inline-block"
+              >Call for more info</a
+            >
+            <a
+              href="tel:+919967488300"
+              class="text-black font-semibold rounded inline-block"
+              >+91 99674 88300</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Background overlay for mobile menu -->
+      <div
+        id="mobileMenuOverlay"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+      ></div>
+
+      <!-- Mobile dropdown menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden fixed inset-0 h-screen bg-[#014260] w-screen flex justify-center items-center flex-col text-2xl z-50 pb-12"
+      >
+        <img
+          src="/assets/logo kredit venture white.png"
+          class="py-10 h-[12rem] mb-16 w-auto justify-center mx-auto"
+          alt=""
+        />
+        <!-- Close button (cross) -->
+        <button
+          class="absolute top-5 right-5 text-white"
+          onclick="toggleMenu()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <ul
+          class="text-white flex flex-col justify-center space-y-5 items-center"
+        >
+          <li>
+            <a href="/" class="hover:text-secondary font-bold">Home</a>
+          </li>
+          <li>
+            <a href="/pages/about.html" class="hover:text-secondary font-bold"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="/pages/service.html" class="hover:text-secondary font-bold"
+              >Our Products</a
+            >
+          </li>
+          <li>
+            <a href="/pages/blog.html" class="hover:text-secondary font-bold"
+              >Blogs</a
+            >
+          </li>
+          <li>
+            <a href="/pages/contact.html" class="hover:text-secondary font-bold"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+        <div class="flex py-10 space-x-10">
+          <a href="https://www.instagram.com/kreditventure/">
+            <img
+              src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
+              alt="Instagram"
+              class="w-6 h-6"
+            />
+          </a>
+          <a href="https://www.facebook.com/kreditventure">
+            <img
+              src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
+              alt="Facebook"
+              class="w-6 h-6"
+            />
+          </a>
+          <a href="https://x.com/KreditVenture">
+            <img
+              src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=ffffff"
+              alt="X"
+              class="w-6 h-6"
+            />
+          </a>
+          <a href="https://www.youtube.com/channel/UCzdw1BEG7c_IbGBkUsJnnHg">
+            <img
+              src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png"
+              alt="YouTube"
+              class="w-6 h-6"
+            />
+          </a>
+          <a href="https://www.linkedin.com/company/kreditventure">
+            <img
+              src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
+              alt="LinkedIn"
+              class="w-6 h-6"
+            />
+          </a>
+        </div>
+        <p class="text-white text-center text-xs mx-10">
+          Kredit Venture (Jads Services Private Limited) NBFC Registration No:
+          N-14 03239
+        </p>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <div class="max-w-screen-xl mx-auto p-5 sm:p-8 md:p-12 relative">
+      <img
+        class="h-auto lg:h-[72vh] flex justify-center mx-auto max-w-screen"
+        src="/assets/enjoying-street-food-fest.jpg"
+        alt="image description"
+      />
+      <div class="max-w-2xl mx-auto">
+        <div
+          class="mt-3 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal"
+        >
+          <div class="">
+            <a
+              href="#"
+              class="text-xs text-indigo-600 uppercase font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+            >
+              Election </a
+            >,
+            <a
+              href="#"
+              class="text-xs text-indigo-600 uppercase font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+            >
+              Politics
+            </a>
+            <h1 href="#" class="text-gray-900 font-bold text-3xl mb-2">
+              Revenge of the Never Trumpers
+            </h1>
+            <p class="text-gray-700 text-xs mt-2">
+              Written By:
+              <a
+                href="#"
+                class="text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+              >
+                Ahmad Sultani
+              </a>
+            </p>
+
+            <p class="text-base leading-8 my-5">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
+            </p>
+
+            <h3 class="text-2xl font-bold my-5">#1. What is Lorem Ipsum?</h3>
+
+            <p class="text-base leading-8 my-5">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
+            </p>
+
+            <blockquote
+              class="border-l-4 text-base italic leading-8 my-5 p-5 text-indigo-600"
+            >
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
+            </blockquote>
+
+            <p class="text-base leading-8 my-5">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
+            </p>
+
+            <a
+              href="#"
+              class="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+            >
+              #Election </a
+            >,
+            <a
+              href="#"
+              class="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+            >
+              #people </a
+            >,
+            <a
+              href="#"
+              class="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+            >
+              #Election2020 </a
+            >,
+            <a
+              href="#"
+              class="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+            >
+              #trump </a
+            >,
+            <a
+              href="#"
+              class="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+            >
+              #Joe
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="bg-[#014260] text-white lg:h-auto bg-center bg-cover lg:hidden block"
+    >
+      <div class="mx-auto">
+        <!-- Logo and Tagline -->
+        <div
+          class="flex lg:h-[15vh] bg-black lg:w-full w-[50vw] lg:justify-start bg-transparent justify-center mx-auto lg:mt-0"
+        >
+          <img
+            src="/assets/logo kredit venture white.png"
+            class="pt-2"
+            alt=""
+          />
+        </div>
+
+        <!-- Navigation Links -->
+        <hr
+          class="lg:w-[56vw] lg:flex my-4 h-[1px] mx-2 lg:mx-auto bg-white lg:justify-center border-0"
+        />
+
+        <nav
+          class="flex flex-col lg:flex-row lg:justify-evenly justify-center lg:mx-36"
+        >
+          <div class="text-center text-xs my-1">
+            <a href="/" class="mx-1">Home</a> |
+            <a href="/pages/about.html" class="mx-1">About US</a> |
+            <a href="/pages/service.html" class="mx-1">Our Products</a> |
+            <a href="/pages/blog.html" class="mx-1">Blogs</a> |
+            <a href="/pages/contact.html" class="mx-1">Contact Us</a> |
+            <a href="/pages/privacy.html" class="mx-1">Privacy Policy</a>
+          </div>
+          <div class="flex justify-center my-1 lg:my-0 space-x-1">
+            <a href="Simplifying"
+              ><img
+                src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
+                alt="Instagram"
+                class="w-6 h-6"
+            /></a>
+            <a href="https://www.facebook.com/kreditventure"
+              ><img
+                src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
+                alt="Facebook"
+                class="w-6 h-6"
+            /></a>
+            <a href="https://x.com/KreditVenture"
+              ><img
+                src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=ffffff"
+                alt="X"
+                class="w-6 h-6"
+            /></a>
+            <a href="https://www.youtube.com/channel/UCzdw1BEG7c_IbGBkUsJnnHg"
+              ><img
+                src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png"
+                alt="YouTube"
+                class="w-6 h-6"
+            /></a>
+            <a href="https://www.linkedin.com/company/kreditventure"
+              ><img
+                src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
+                alt="LinkedIn"
+                class="w-6 h-6"
+            /></a>
+          </div>
+        </nav>
+
+        <hr
+          class="lg:w-[56vw] my-4 h-[1px] mx-3 lg:mx-auto bg-white border-0"
+        />
+
+        <!-- png layer -->
+        <div class="flex justify-center flex-col">
+          <p class="text-center text-sm flex flex-col">
+            <span>
+              Kredit Venture (Jads Services Private Limited) NBFC Registration
+              No: N-14 03239
+            </span>
+          </p>
+          <img src="/assets/Layer-1-copy-2.png" alt="" />
+        </div>
+        <!-- png layer -->
+      </div>
+    </footer>
+
+    <footer
+      class="hidden lg:block bg-[#014260] text-white lg:h-auto bg-center bg-cover"
+    >
+      <div
+        class="flex flex-row justify-center w-full gap-4 mx-auto items-center py-5"
+      >
+        <div class="">
+          <img
+            src="/assets/logo kredit venture white.png"
+            class="h-20 w-auto"
+            alt=""
+          />
+        </div>
+
+        <div class="flex flex-col">
+          <div class="flex flex-row justify-between w-full">
+            <div class="text-sm flex flex-row justify-center">
+              <a href="/" class="mx-1 hover:text-blue-400 transition">Home</a>
+              <span>|</span>
+              <a
+                href="/pages/about.html"
+                class="mx-1 hover:text-blue-400 transition"
+                >About Us</a
+              >
+              <span>|</span>
+              <a
+                href="/pages/service.html"
+                class="mx-1 hover:text-blue-400 transition"
+                >Our Products</a
+              >
+              <span>|</span>
+              <a
+                href="/pages/blog.html"
+                class="mx-1 hover:text-blue-400 transition"
+                >Blogs</a
+              >
+              <span>|</span>
+              <a
+                href="/pages/contact.html"
+                class="mx-1 hover:text-blue-400 transition"
+                >Contact Us</a
+              >
+              <span>|</span>
+              <a
+                href="/pages/privacy.html"
+                class="mx-1 hover:text-blue-400 transition"
+                >Privacy Policy</a
+              >
+            </div>
+            <div class="flex justify-center gap-1 mt-4 lg:mt-0">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
+                  alt="Instagram"
+                  class="w-6 h-6 hover:opacity-70 transition"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/kreditventure"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
+                  alt="Facebook"
+                  class="w-6 h-6 hover:opacity-70 transition"
+                />
+              </a>
+              <a
+                href="https://x.com/KreditVenture"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=ffffff"
+                  alt="X"
+                  class="w-6 h-6 hover:opacity-70 transition"
+                />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCzdw1BEG7c_IbGBkUsJnnHg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png"
+                  alt="YouTube"
+                  class="w-6 h-6 hover:opacity-70 transition"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/kreditventure"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
+                  alt="LinkedIn"
+                  class="w-6 h-6 hover:opacity-70 transition"
+                />
+              </a>
+            </div>
+          </div>
+
+          <hr class="lg:w-[56vw] h-[1px] mx-3 lg:mx-auto bg-white border-0" />
+        </div>
+      </div>
+
+      <!-- png layer -->
+      <div class="flex justify-center flex-col">
+        <p class="text-center text-sm flex flex-col">
+          <span>
+            Kredit Venture (Jads Services Private Limited) NBFC Registration No:
+            N-14 03239
+          </span>
+        </p>
+        <img src="/assets/Layer-1-copy-2.png" alt="" />
+      </div>
+      <!-- png layer -->
+    </footer>
+    <!-- footer end -->
+
+    <script src="/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Kredit venture | Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      body {
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body class="poppins-regular">
+    <!-- header start -->
+
+    <header class="h-auto z-50 w-full shadow-md">
+      <div class="container mx-auto flex justify-between items-center h-full">
+        <!-- Left section: Logo -->
+        <div class="flex items-center lg:mr-12">
+          <a href="/">
+            <img
+              src="/assets/logo.png"
+              alt="Logo"
+              class="h-[5rem] w-auto mr-5"
+            />
+          </a>
+        </div>
+
+        <div class="md:hidden flex flex-row">
+          <div class="flex items-center">
+            <img
+              src="/assets/call1.svg"
+              class="bg-white lg:block hidden bg-white rounded-full"
+              alt=""
+            />
+            <div>
+              <a
+                href="tel:+919967488300"
+                class="text-black hidden lg:block font-semibold items-center rounded inline-block"
+                >+91 99674 88300</a
+              >
+
+              <button
+                class="bg-green-500 ml-20 text-xs p-2 gap-2 rounded-lg flex flex-row items-center"
+              >
+                <img
+                  src="/assets/call.svg"
+                  class="bg-inherit text-white"
+                  alt=""
+                />
+                <a
+                  href="tel:+919967488300"
+                  class="text-white font-bold items-center rounded inline-block"
+                  >Call Us</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hamburger menu (for mobile) -->
+        <div class="flex md:hidden mx-6">
+          <button
+            id="hamburger"
+            class="text-black focus:outline-none"
+            onclick="toggleMenu()"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Center section: Menu (hidden on mobile, visible on desktop) -->
+        <nav
+          id="navMenu"
+          class="hidden w-[50vw] mt-10 lg:flex h-[12vh] justify-center items-center bg-orange-600"
+        >
+          <ul
+            class="flex flex-col md:flex-row justify-center items-center mx-auto lg:px-0 w-full text-white"
+          >
+            <li
+              class="flex-1 text-center border-b md:border-b-0 md:border-r border-white"
+            >
+              <a href="/" class="hover:text-secondary font-bold">Home</a>
+            </li>
+            <li
+              class="flex-1 text-center border-b md:border-b-0 md:border-r border-white"
+            >
+              <a href="/pages/about.html" class="hover:text-secondary font-bold"
+                >About Us</a
+              >
+            </li>
+            <li
+              class="flex-1 text-center border-b md:border-b-0 md:border-r border-white"
+            >
+              <a
+                href="/pages/service.html"
+                class="hover:text-secondary font-bold"
+                >Our Products</a
+              >
+            </li>
+            <li
+              class="flex-1 text-center border-b md:border-b-0 md:border-r border-white"
+            >
+              <a href="/pages/blog.html" class="hover:text-secondary font-bold"
+                >Blogs</a
+              >
+            </li>
+            <li class="flex-1 text-center">
+              <a
+                href="/pages/contact.html"
+                class="hover:text-secondary font-bold"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Right section: Buttons (visible on desktop) -->
+        <div class="hidden mt-10 lg:flex lg:flex-row lg:items-end">
+          <img
+            src="/assets/call1.svg"
+            class="bg-white invert rounded-full p-3"
+            alt=""
+          />
+          <div class="flex flex-col mx-3">
+            <a
+              href="tel:+919967488300"
+              class="text-black font-semibold rounded inline-block"
+              >Call for more info</a
+            >
+            <a
+              href="tel:+919967488300"
+              class="text-black font-semibold rounded inline-block"
+              >+91 99674 88300</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Background overlay for mobile menu -->
+      <div
+        id="mobileMenuOverlay"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+      ></div>
+
+      <!-- Mobile dropdown menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden fixed inset-0 h-screen bg-[#014260] w-screen flex justify-center items-center flex-col text-2xl z-50 pb-12"
+      >
+        <img
+          src="/assets/logo kredit venture white.png"
+          class="py-10 h-[12rem] mb-16 w-auto justify-center mx-auto"
+          alt=""
+        />
+        <!-- Close button (cross) -->
+        <button
+          class="absolute top-5 right-5 text-white"
+          onclick="toggleMenu()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <ul
+          class="text-white flex flex-col justify-center space-y-5 items-center"
+        >
+          <li>
+            <a href="/" class="hover:text-secondary font-bold">Home</a>
+          </li>
+          <li>
+            <a href="/pages/about.html" class="hover:text-secondary font-bold"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="/pages/service.html" class="hover:text-secondary font-bold"
+              >Our Products</a
+            >
+          </li>
+          <li>
+            <a href="/pages/blog.html" class="hover:text-secondary font-bold"
+              >Blogs</a
+            >
+          </li>
+          <li>
+            <a href="/pages/contact.html" class="hover:text-secondary font-bold"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+        <div class="flex py-10 space-x-10">
+          <a href="https://www.instagram.com/kreditventure/">
+            <img
+              src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
+              alt="Instagram"
+              class="w-6 h-6"
+            />
+          </a>
+          <a href="https://www.facebook.com/kreditventure">
+            <img
+              src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
+              alt="Facebook"
+              class="w-6 h-6"
+            />
+          </a>
+          <a href="https://x.com/KreditVenture">
+            <img
+              src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=ffffff"
+              alt="X"
+              class="w-6 h-6"
+            />
+          </a>
+          <a href="https://www.youtube.com/channel/UCzdw1BEG7c_IbGBkUsJnnHg">
+            <img
+              src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png"
+              alt="YouTube"
+              class="w-6 h-6"
+            />
+          </a>
+          <a href="https://www.linkedin.com/company/kreditventure">
+            <img
+              src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
+              alt="LinkedIn"
+              class="w-6 h-6"
+            />
+          </a>
+        </div>
+        <p class="text-white text-center text-xs mx-10">
+          Kredit Venture (Jads Services Private Limited) NBFC Registration No:
+          N-14 03239
+        </p>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- contact us start -->
+    <div
+      class="bg-[url('/assets/contact.jpg')] text-white bg-cover bg-top h-[30vh] lg:h-[70vh] text-4xl font-bold text-center flex items-center justify-center"
+    >
+      Contact Us
+    </div>
+
+    <div class="py-12 max-w-6xl mx-auto">
+      <div
+        class="grid lg:grid-cols-2 items-center gap-10 sm:p-8 p-4 font-[sans-serif]"
+      >
+        <div class="lg:w-[40vw]">
+          <h1 class="text-4xl font-bold text-black">Get in Touch</h1>
+          <p class="text-sm text-black mt-4 leading-relaxed">
+            You can call us or leave a request and we’ll reply as soon as
+            possible. We will be glad to see you in our office too.
+          </p>
+
+          <ul class="mt-12 space-y-8">
+            <li class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16px"
+                height="16px"
+                fill="#000"
+                viewBox="0 0 479.058 479.058"
+              >
+                <path
+                  d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159L239.529 264.631 39.173 90.982a14.902 14.902 0 0 1 5.738-1.159zm0 299.411H44.912c-8.26 0-14.971-6.71-14.971-14.971V122.615l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"
+                  data-original="#000000"
+                />
+              </svg>
+              <a href="javascript:void(0)" class="text-black text-sm ml-4">
+                prajit@kreditventure.com
+              </a>
+            </li>
+            <li class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16px"
+                height="16px"
+                fill="#000"
+                viewBox="0 0 482.6 482.6"
+              >
+                <path
+                  d="M98.339 320.8c47.6 56.9 104.9 101.7 170.3 133.4 24.9 11.8 58.2 25.8 95.3 28.2 2.3.1 4.5.2 6.8.2 24.9 0 44.9-8.6 61.2-26.3.1-.1.3-.3.4-.5 5.8-7 12.4-13.3 19.3-20 4.7-4.5 9.5-9.2 14.1-14 21.3-22.2 21.3-50.4-.2-71.9l-60.1-60.1c-10.2-10.6-22.4-16.2-35.2-16.2-12.8 0-25.1 5.6-35.6 16.1l-35.8 35.8c-3.3-1.9-6.7-3.6-9.9-5.2-4-2-7.7-3.9-11-6-32.6-20.7-62.2-47.7-90.5-82.4-14.3-18.1-23.9-33.3-30.6-48.8 9.4-8.5 18.2-17.4 26.7-26.1 3-3.1 6.1-6.2 9.2-9.3 10.8-10.8 16.6-23.3 16.6-36s-5.7-25.2-16.6-36l-29.8-29.8c-3.5-3.5-6.8-6.9-10.2-10.4-6.6-6.8-13.5-13.8-20.3-20.1-10.3-10.1-22.4-15.4-35.2-15.4-12.7 0-24.9 5.3-35.6 15.5l-37.4 37.4c-13.6 13.6-21.3 30.1-22.9 49.2-1.9 23.9 2.5 49.3 13.9 80 17.5 47.5 43.9 91.6 83.1 138.7zm-72.6-216.6c1.2-13.3 6.3-24.4 15.9-34l37.2-37.2c5.8-5.6 12.2-8.5 18.4-8.5 6.1 0 12.3 2.9 18 8.7 6.7 6.2 13 12.7 19.8 19.6 3.4 3.5 6.9 7 10.4 10.6l29.8 29.8c6.2 6.2 9.4 12.5 9.4 18.7s-3.2 12.5-9.4 18.7c-3.1 3.1-6.2 6.3-9.3 9.4-9.3 9.4-18 18.3-27.6 26.8l-.5.5c-8.3 8.3-7 16.2-5 22.2.1.3.2.5.3.8 7.7 18.5 18.4 36.1 35.1 57.1 30 37 61.6 65.7 96.4 87.8 4.3 2.8 8.9 5 13.2 7.2 4 2 7.7 3.9 11 6 .4.2.7.4 1.1.6 3.3 1.7 6.5 2.5 9.7 2.5 8 0 13.2-5.1 14.9-6.8l37.4-37.4c5.8-5.8 12.1-8.9 18.3-8.9 7.6 0 13.8 4.7 17.7 8.9l60.3 60.2c12 12 11.9 25-.3 37.7-4.2 4.5-8.6 8.8-13.3 13.3-7 6.8-14.3 13.8-20.9 21.7-11.5 12.4-25.2 18.2-42.9 18.2-1.7 0-3.5-.1-5.2-.2-32.8-2.1-63.3-14.9-86.2-25.8-62.2-30.1-116.8-72.8-162.1-127-37.3-44.9-62.4-86.7-79-131.5-10.3-27.5-14.2-49.6-12.6-69.7z"
+                  data-original="#000000"
+                ></path>
+              </svg>
+              <a href="javascript:void(0)" class="text-black text-sm ml-4">
+                +91 9967488300
+              </a>
+            </li>
+
+            <li class="flex flex-col">
+              <div class="flex flex-row items-center space-x-4">
+                <i class="fa-solid fa-location-dot"> </i>
+                <h4>Head Office:</h4>
+              </div>
+              <div class="flex flex-col justify-center lg:mx-3">
+                <div class="flex flex-col space-y-2">
+                  <a
+                    href="javascript:void(0)"
+                    class="text-black text-sm lg:ml-4 ml-7 rounded-md shadow-md border-2 border p-2"
+                  >
+                    <span class="underline">Mumbai</span> <br />
+                    10th Floor,Awfis, R-City-2 Offices, Adjoining R-City Mall,
+                    Lal Bahadur Shastri Marg, Ghatkopar (West), Mumbai,
+                    Maharashtra - 400086
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="flex flex-col">
+              <div class="flex flex-row items-center space-x-4">
+                <i class="fa-solid fa-location-dot"></i>
+                <h4>Branch Locations:</h4>
+              </div>
+              <div class="flex flex-col text-start justify-center lg:mx-3">
+                <div class="flex lg:w-[38vw] flex-col lg:flex-row flex-col">
+                  <a
+                    href="javascript:void(0)"
+                    class="text-black text-sm lg:ml-4 ml-7 rounded-md shadow-md border-2 border p-2"
+                  >
+                    <span class="underline">Panvel</span> <br />Office No: 120,
+                    1st Floor,Prabhakar Raje Complex, In Front Of Chhatrapati
+                    Shivaji Maharaj Chowk, M.T.N.L Road, Panvel - 410206
+                  </a>
+                  <a
+                    href="javascript:void(0)"
+                    class="text-black text-sm lg:ml-4 ml-7 rounded-md shadow-md border-2 border p-2"
+                  >
+                    <span class="underline">Baramati</span> <br />Shree Plaza
+                    Building, Ground Floor ,Shop No-1, Near Sudhit Hotel,
+                    Ambikanagar, Jalochi, Baramati - 413102
+                  </a>
+                  <a
+                    href="javascript:void(0)"
+                    class="text-black lg:ml-4 text-sm ml-7 rounded-md shadow-md border-2 border p-2"
+                  >
+                    <span class="underline">Aurangabad</span> <br />525, 5 th
+                    floor, D-wing ,Freedom Tower ,Jawhar colony road, Akashwani,
+                    Chhatrapati Sambhajinagar- 431001
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="flex mt-12 space-x-4">
+            <li
+              class="bg-[#014260] hover:bg-[#014260e2] h-10 w-10 rounded-full flex items-center justify-center shrink-0"
+            >
+              <a href="https://www.instagram.com/kreditventure/">
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
+                  alt="Instagram"
+                  class="w-6 h-6"
+                />
+              </a>
+            </li>
+            <li
+              class="bg-[#014260] hover:bg-[#014260e2] h-10 w-10 rounded-full flex items-center justify-center shrink-0"
+            >
+              <a href="https://www.facebook.com/kreditventure"
+                ><img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
+                  alt="Facebook"
+                  class="w-6 h-6"
+              /></a>
+            </li>
+            <li
+              class="bg-[#014260] hover:bg-[#014260e2] h-10 w-10 rounded-full flex items-center justify-center shrink-0"
+            >
+              <a href="https://x.com/KreditVenture"
+                ><img
+                  src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=ffffff"
+                  alt="X"
+                  class="w-6 h-6"
+              /></a>
+            </li>
+            <li
+              class="bg-[#014260] hover:bg-[#014260e2] h-10 w-10 rounded-full flex items-center justify-center shrink-0"
+            >
+              <a href="https://www.youtube.com/channel/UCzdw1BEG7c_IbGBkUsJnnHg"
+                ><img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png"
+                  alt="YouTube"
+                  class="w-6 h-6"
+              /></a>
+            </li>
+            <li
+              class="bg-[#014260] hover:bg-[#014260e2] h-10 w-10 rounded-full flex items-center justify-center shrink-0"
+            >
+              <a href="https://www.linkedin.com/company/kreditventure"
+                ><img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
+                  alt="LinkedIn"
+                  class="w-6 h-6"
+              /></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-100 p-4 ml-10 lg:w-[34vw] rounded-lg">
+          <p class="text-sm font-semibold text-black py-1">
+            I'm interested in...
+          </p>
+
+          <span
+            class="rounded-lg text-black text-sm tracking-wider font-medium"
+          >
+            Type of loan
+          </span>
+
+          <div class="space-y-4 max-lg:mt-4">
+            <label
+              class="checkbox-button flex items-center gap-2 px-4 py-2 rounded-lg text-gray-800 text-sm tracking-wider font-medium cursor-pointer border-2 border-gray-300 transition-colors duration-200 ease-in-out"
+              onclick="toggleCheckbox(this)"
+            >
+              <input type="radio" name="loanType" value="LAP" class="hidden" />
+              <span class="checkmark text-gray-300">✔</span>
+              <span>LAP (Loan Against Property)</span>
+            </label>
+
+            <label
+              class="checkbox-button flex items-center gap-2 px-4 py-2 rounded-lg text-gray-800 text-sm tracking-wider font-medium cursor-pointer border-2 border-gray-300 transition-colors duration-200 ease-in-out"
+              onclick="toggleCheckbox(this)"
+            >
+              <input
+                type="radio"
+                name="loanType"
+                value="Unsecured"
+                class="hidden"
+              />
+              <span class="checkmark text-gray-300">✔</span>
+              <span>Unsecured Loan</span>
+            </label>
+          </div>
+
+          <form class="mt-8 space-y-4">
+            <input
+              type="text"
+              placeholder="Full Name *"
+              required
+              class="w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-[#014260]"
+            />
+            <input
+              type="text"
+              required
+              placeholder="Address"
+              class="w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-[#014260]"
+            />
+            <input
+              required
+              type="tel"
+              maxlength="10"
+              pattern="\d{10}"
+              placeholder="Phone Number *"
+              class="w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-[#014260]"
+            />
+            <input
+              type="email"
+              placeholder="Email *"
+              required
+              class="w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-[#014260]"
+            />
+            <textarea
+              placeholder="Message"
+              rows="6"
+              class="w-full rounded-lg px-4 text-gray-800 text-sm pt-3 outline-[#014260]"
+            ></textarea>
+            <button
+              type="button"
+              class="text-white bg-green-500 hover:bg-green-700 tracking-wide rounded-lg text-sm px-4 py-3 flex items-center justify-center w-full !mt-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16px"
+                height="16px"
+                fill="#fff"
+                class="mr-2"
+                viewBox="0 0 548.244 548.244"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
+                  clip-rule="evenodd"
+                  data-original="#000000"
+                />
+              </svg>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- map start -->
+    <div class="relative py-12 mx-auto w-[90vw] lg:w-[85vw] h-96">
+      <iframe
+        class="absolute top-0 left-0 w-full h-full"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235.63579656574572!2d72.91674183029423!3d19.100076207381377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c732fb7bbe87%3A0x8c4972b7b74d2ef3!2sAwfis%20RCity!5e0!3m2!1sen!2sin!4v1729666499733!5m2!1sen!2sin"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <!-- map end -->
+    <!-- Subscribe start -->
+    <div
+      class="container flex flex-col xl:flex-row mx-auto px-5 py-12 text-gray-500"
+    >
+      <div class="w-full mb-6 xl:mb-0 sm:text-center">
+        <div class="mb-4 text-gray-900 text-3xl font-extrabold">
+          Join 2,000+ subscribers
+        </div>
+
+        <div class="text-lg">
+          Stay in the loop with everything you need to know.
+        </div>
+      </div>
+
+      <div class="w-full">
+        <div class="flex flex-col justify-center sm:flex-row gap-3 w-full">
+          <input
+            type="text"
+            placeholder="Enter your email"
+            class="sm:w-2/4 h-12 p-3 text-gray-900 border border-solid border-gray-300 rounded-lg shadow"
+          />
+
+          <button
+            type="submit"
+            class="sm:w-1/4 h-12 text-white bg-[#014260] rounded-lg shadow"
+          >
+            Subscribe
+          </button>
+        </div>
+
+        <div class="mt-3 text-sm sm:text-center">
+          We care about your data in our
+          <button
+            data-modal-target="default-modal"
+            data-modal-toggle="default-modal"
+            class="cursor-pointer transition-all text-[#014260] font-bold duration-300 ease-in-out hover:text-gray-700"
+          >
+            Privacy Policy</button
+          >.
+        </div>
+      </div>
+    </div>
+    <!-- Subscribe end -->
+
+    <!-- contact us end -->
+
+    <!-- footer start -->
+    <footer
+      class="bg-[#014260] text-white lg:h-auto bg-center bg-cover lg:hidden block"
+    >
+      <div class="mx-auto">
+        <!-- Logo and Tagline -->
+        <div
+          class="flex lg:h-[15vh] bg-black lg:w-full w-[50vw] lg:justify-start bg-transparent justify-center mx-auto lg:mt-0"
+        >
+          <img
+            src="/assets/logo kredit venture white.png"
+            class="pt-2"
+            alt=""
+          />
+        </div>
+
+        <!-- Navigation Links -->
+        <hr
+          class="lg:w-[56vw] lg:flex my-4 h-[1px] mx-2 lg:mx-auto bg-white lg:justify-center border-0"
+        />
+
+        <nav
+          class="flex flex-col lg:flex-row lg:justify-evenly justify-center lg:mx-36"
+        >
+          <div class="text-center text-xs my-1">
+            <a href="/" class="mx-1">Home</a> |
+            <a href="/pages/about.html" class="mx-1">About US</a> |
+            <a href="/pages/service.html" class="mx-1">Our Products</a> |
+            <a href="/pages/blog.html" class="mx-1">Blogs</a> |
+            <a href="/pages/contact.html" class="mx-1">Contact Us</a> |
+            <a href="/pages/privacy.html" class="mx-1">Privacy Policy</a>
+          </div>
+          <div class="flex justify-center my-1 lg:my-0 space-x-1">
+            <a href="Simplifying"
+              ><img
+                src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
+                alt="Instagram"
+                class="w-6 h-6"
+            /></a>
+            <a href="https://www.facebook.com/kreditventure"
+              ><img
+                src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
+                alt="Facebook"
+                class="w-6 h-6"
+            /></a>
+            <a href="https://x.com/KreditVenture"
+              ><img
+                src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=ffffff"
+                alt="X"
+                class="w-6 h-6"
+            /></a>
+            <a href="https://www.youtube.com/channel/UCzdw1BEG7c_IbGBkUsJnnHg"
+              ><img
+                src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png"
+                alt="YouTube"
+                class="w-6 h-6"
+            /></a>
+            <a href="https://www.linkedin.com/company/kreditventure"
+              ><img
+                src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
+                alt="LinkedIn"
+                class="w-6 h-6"
+            /></a>
+          </div>
+        </nav>
+
+        <hr
+          class="lg:w-[56vw] my-4 h-[1px] mx-3 lg:mx-auto bg-white border-0"
+        />
+
+        <!-- png layer -->
+        <div class="flex justify-center flex-col">
+          <p class="text-center text-sm flex flex-col">
+            <span>
+              Kredit Venture (Jads Services Private Limited) NBFC Registration
+              No: N-14 03239
+            </span>
+          </p>
+          <img src="/assets/Layer-1-copy-2.png" alt="" />
+        </div>
+        <!-- png layer -->
+      </div>
+    </footer>
+
+    <footer
+      class="hidden lg:block bg-[#014260] text-white lg:h-auto bg-center bg-cover"
+    >
+      <div
+        class="flex flex-row justify-center w-full gap-4 mx-auto items-center py-5"
+      >
+        <div class="">
+          <img
+            src="/assets/logo kredit venture white.png"
+            class="h-20 w-auto"
+            alt=""
+          />
+        </div>
+
+        <div class="flex flex-col">
+          <div class="flex flex-row justify-between w-full">
+            <div class="text-sm flex flex-row justify-center">
+              <a href="/" class="mx-1 hover:text-blue-400 transition">Home</a>
+              <span>|</span>
+              <a
+                href="/pages/about.html"
+                class="mx-1 hover:text-blue-400 transition"
+                >About Us</a
+              >
+              <span>|</span>
+              <a
+                href="/pages/service.html"
+                class="mx-1 hover:text-blue-400 transition"
+                >Our Products</a
+              >
+              <span>|</span>
+              <a
+                href="/pages/blog.html"
+                class="mx-1 hover:text-blue-400 transition"
+                >Blogs</a
+              >
+              <span>|</span>
+              <a
+                href="/pages/contact.html"
+                class="mx-1 hover:text-blue-400 transition"
+                >Contact Us</a
+              >
+              <span>|</span>
+              <a
+                href="/pages/privacy.html"
+                class="mx-1 hover:text-blue-400 transition"
+                >Privacy Policy</a
+              >
+            </div>
+            <div class="flex justify-center gap-1 mt-4 lg:mt-0">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
+                  alt="Instagram"
+                  class="w-6 h-6 hover:opacity-70 transition"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/kreditventure"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
+                  alt="Facebook"
+                  class="w-6 h-6 hover:opacity-70 transition"
+                />
+              </a>
+              <a
+                href="https://x.com/KreditVenture"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=ffffff"
+                  alt="X"
+                  class="w-6 h-6 hover:opacity-70 transition"
+                />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCzdw1BEG7c_IbGBkUsJnnHg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png"
+                  alt="YouTube"
+                  class="w-6 h-6 hover:opacity-70 transition"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/kreditventure"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
+                  alt="LinkedIn"
+                  class="w-6 h-6 hover:opacity-70 transition"
+                />
+              </a>
+            </div>
+          </div>
+
+          <hr class="lg:w-[56vw] h-[1px] mx-3 lg:mx-auto bg-white border-0" />
+        </div>
+      </div>
+
+      <!-- png layer -->
+      <div class="flex justify-center flex-col">
+        <p class="text-center text-sm flex flex-col">
+          <span>
+            Kredit Venture (Jads Services Private Limited) NBFC Registration No:
+            N-14 03239
+          </span>
+        </p>
+        <img src="/assets/Layer-1-copy-2.png" alt="" />
+      </div>
+      <!-- png layer -->
+    </footer>
+    <!-- footer end -->
+    <script src="/script.js"></script>
+  </body>
+</html>

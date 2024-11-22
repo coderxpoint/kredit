@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Kredit venture</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      body {
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      /* Card Container */
+      .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+        width: 20vw;
+        perspective: 1000px; /* Adds depth to the 3D effect */
+      }
+
+      .card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d; /* Ensures child elements are positioned in 3D space */
+        transition: transform 0.7s;
+      }
+
+      .card:hover {
+        transform: rotateY(180deg); /* Flips the card on hover */
+      }
+
+      .card-front,
+      .card-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backface-visibility: hidden; /* Prevents the back side from showing when flipped */
+      }
+
+      .card-front {
+        background-color: #003c58; /* Front side background */
+        padding: 1rem;
+        color: white;
+        flex-direction: column;
+      }
+
+      .card-back {
+        background-color: #0edc59; /* Back side background */
+        padding: 1rem;
+        color: white;
+        flex-direction: column;
+
+        transform: rotateY(
+          180deg
+        ); /* Rotates the back side by 180 degrees initially */
+      }
+
+      /* Mobile and Tablet Responsive Styles */
+      @media (max-width: 768px) {
+        .card-container {
+          width: 80vw; /* Increased width for mobile */
+          height: 50vh; /* Decreased height for better fit */
+        }
+
+        .card {
+          width: 100%;
+          height: 100%;
+          transform-style: preserve-3d;
+          transition: transform 0.7s;
+        }
+
+        .card-front,
+        .card-back {
+          padding: 0.5rem; /* Reduced padding for smaller screens */
+        }
+
+        .card-front img {
+          width: 35px; /* Make image smaller */
+          height: 35px;
+        }
+
+        .card-front h3 {
+          font-size: 1rem; /* Adjusted text size */
+        }
+
+        .card-front p {
+          font-size: 0.875rem; /* Adjusted text size */
+        }
+
+        .card-back p {
+          font-size: 0.75rem; /* Smaller text size for the back */
+        }
+
+        .card-back a i {
+          font-size: 1.25rem; /* Slightly smaller LinkedIn icon */
+        }
+      }
+
+      /* Mobile Styles (Extra small screens) */
+      @media (max-width: 480px) {
+        .card-container {
+          width: 90vw; /* Further increase the card width on very small screens */
+          height: 45vh; /* Further reduce the height */
+        }
+
+        .card-front img {
+          width: 140px; /* Make image even smaller */
+          height: 140px;
+        }
+
+        .card-front h3 {
+          font-size: 1rem; /* Slightly smaller name text */
+        }
+
+        .card-front p {
+          font-size: 0.75rem; /* Further decrease description text */
+        }
+
+        .card-back p {
+          font-size: 1rem; /* Smaller back text */
+        }
+
+        .card-back a i {
+          font-size: 1rem; /* Adjust icon size */
+        }
+      }
+    </style>
+  </head>
+  <body class="poppins-regular">
+    <!-- header section start -->
+    <header class="lg:h-[20vh] h-auto z-50 w-full shadow-md">
+      <div class="mx-auto flex justify-between items-center h-full">
+        <!-- Left section: Logo -->
+        <div class="flex items-center lg:ml-20">
+          <a href="/">
+            <img
+              src="/assets/logo.png"
+              alt="Logo"
+              class="h-[8rem] justify-start w-auto"
+            />
+          </a>
+        </div>
+
+        <div class="md:hidden flex flex-row">
+          <div class="flex items-center">
+            <img
+              src="/assets/call1.svg"
+              class="bg-white lg:block hidden bg-white rounded-full"
+              alt=""
+            />
+            <div>
+              <a
+                href="tel:+919967488300"
+                class="text-black hidden lg:block font-semibold items-center rounded inline-block"
+                >+91 99674 88300</a
+              >
+
+              <button
+                class="bg-green-500 ml-20 text-xs p-2 gap-2 rounded-lg flex flex-row items-center"
+              >
+                <img
+                  src="/assets/call.svg"
+                  class="bg-inherit text-white"
+                  alt=""
+                />
+                <a
+                  href="tel:+919967488300"
+                  class="text-white font-bold items-center rounded inline-block"
+                  >Call Us</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hamburger menu (for mobile) -->
+        <div class="flex md:hidden mx-6">
+          <button
+            id="hamburger"
+            class="text-black focus:outline-none"
+            onclick="toggleMenu()"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Center section: Menu (hidden on mobile, visible on desktop) -->
+        <nav
+          id="navMenu"
+          class="items-center hidden w-[50vw] mt-20 lg:mt-32 h-[14vh] lg:flex justify-center bg-orange-600 z-10"
+        >
+          <ul
+            class="flex flex-col md:flex-row justify-center items-center mx-auto w-full text-white"
+          >
+            <li
+              class="flex-1 text-center border-b md:border-b-0 md:border-r border-white"
+            >
+              <a href="/" class="hover:text-secondary font-bold">Home</a>
+            </li>
+            <li
+              class="flex-1 text-center border-b md:border-b-0 md:border-r border-white"
+            >
+              <a href="/pages/about.html" class="hover:text-secondary font-bold"
+                >About Us</a
+              >
+            </li>
+            <li
+              class="flex-1 text-center border-b md:border-b-0 md:border-r border-white"
+            >
+              <a
+                href="/pages/service.html"
+                class="hover:text-secondary font-bold"
+                >Our Products</a
+              >
+            </li>
+            <li
+              class="flex-1 text-center border-b md:border-b-0 md:border-r border-white"
+            >
+              <a href="/pages/blog.html" class="hover:text-secondary font-bold"
+                >Blogs</a
+              >
+            </li>
+            <li class="flex-1 text-center">
+              <a
+                href="/pages/contact.html"
+                class="hover:text-secondary font-bold"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Right section: Buttons (visible on desktop) -->
+        <div class="hidden mt-10 lg:flex lg:flex-row lg:items-end">
+          <img
+            src="/assets/call1.svg"
+            class="bg-white invert rounded-full p-3"
+            alt=""
+          />
+          <div class="flex flex-col text-xl mx-3">
+            <a
+              href="tel:+919967488300"
+              class="text-black font-semibold rounded inline-block"
+              >Call for more info</a
+            >
+            <a
+              href="tel:+919967488300"
+              class="text-black font-semibold rounded inline-block"
+              >+91 99674 88300</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Background overlay for mobile menu -->
+      <div
+        id="mobileMenuOverlay"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+      ></div>
+
+      <!-- Mobile dropdown menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden fixed inset-0 h-screen bg-[#014260] w-screen flex justify-center items-center flex-col text-2xl z-50 pb-12"
+      >
+        <img
+          src="/assets/logo kredit venture white.png"
+          class="py-10 h-[12rem] mb-16 w-auto justify-center mx-auto"
+          alt=""
+        />
+        <!-- Close button (cross) -->
+        <button
+          class="absolute top-5 right-5 text-white"
+          onclick="toggleMenu()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <ul
+          class="text-white flex flex-col justify-center space-y-5 items-center"
+        >
+          <li>
+            <a href="/" class="hover:text-secondary font-bold">Home</a>
+          </li>
+          <li>
+            <a href="/pages/about.html" class="hover:text-secondary font-bold"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="/pages/service.html" class="hover:text-secondary font-bold"
+              >Our Products</a
+            >
+          </li>
+          <li>
+            <a href="/pages/blog.html" class="hover:text-secondary font-bold"
+              >Blogs</a
+            >
+          </li>
+          <li>
+            <a href="/pages/contact.html" class="hover:text-secondary font-bold"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+        <div class="flex py-10 space-x-10">
+          <a href="https://www.instagram.com/kreditventure/">
+            <img
+              src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
+              alt="Instagram"
+              class="w-6 h-6"
+            />
+          </a>
+          <a href="https://www.facebook.com/kreditventure">
+            <img
+              src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
+              alt="Facebook"
+              class="w-6 h-6"
+            />
+          </a>
+          <a href="https://x.com/KreditVenture">
+            <img
+              src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=ffffff"
+              alt="X"
+              class="w-6 h-6"
+            />
+          </a>
+          <a href="https://www.youtube.com/channel/UCzdw1BEG7c_IbGBkUsJnnHg">
+            <img
+              src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png"
+              alt="YouTube"
+              class="w-6 h-6"
+            />
+          </a>
+          <a href="https://www.linkedin.com/company/kreditventure">
+            <img
+              src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
+              alt="LinkedIn"
+              class="w-6 h-6"
+            />
+          </a>
+        </div>
+        <p class="text-white text-center text-xs mx-10">
+          Kredit Venture (Jads Services Private Limited) NBFC Registration No:
+          N-14 03239
+        </p>
+      </div>
+    </header>
+    <!-- header section end -->
+
+    <!-- pop up  -->
+    <div
+      class="lg:h-[90vh] bg-contain flex items-center justify-evenly bg-[url('/assets/Layer-33.png')]"
+    >
+      <!-- Mobile view image -->
+      <div class="h-auto lg:hidden">
+        <a href="#">
+          <img src="/assets/Frame.jpg" alt="Mobile View Image" />
+        </a>
+      </div>
+
+      <!-- Grid of images for larger screens -->
+      <div class="hidden lg:grid grid-cols-6 grid-rows-1 gap-4 w-full">
+        <!-- Image Block 1 -->
+        <div
+          class="relative flex justify-center items-center h-full bg-gray-200 group"
+        >
+          <a
+            href="#"
+            class="block h-full w-full"
+            onclick="showModal('/assets/color/Frame 881.jpg'); return false;"
+          >
+            <img
+              src="/assets/color/Frame 881.jpg"
+              alt="Image 1"
+              class="h-full w-full object-cover filter grayscale transition duration-300 group-hover:grayscale-0"
+            />
+            <div
+              class="absolute inset-0 bg-orange-500 opacity-0 transition-opacity duration-300 group-hover:opacity-0"
+            ></div>
+          </a>
+        </div>
+
+        <!-- Image Block 2 -->
+        <div
+          class="relative flex justify-center items-center h-full bg-gray-200 group"
+        >
+          <a
+            href="#"
+            class="block h-full w-full"
+            onclick="showModal('/assets/color/Frame 880.jpg'); return false;"
+          >
+            <img
+              src="/assets/color/Frame 880.jpg"
+              alt="Image 2"
+              class="h-full w-full object-cover filter grayscale transition duration-300 group-hover:grayscale-0"
+            />
+            <div
+              class="absolute inset-0 bg-orange-500 opacity-0 transition-opacity duration-300 group-hover:opacity-0"
+            ></div>
+          </a>
+        </div>
+
+        <!-- Image Block 3 -->
+        <div
+          class="relative flex justify-center items-center h-full bg-gray-200 group"
+        >
+          <a
+            href="#"
+            class="block h-full w-full"
+            onclick="showModal('/assets/color/Frame 882.jpg'); return false;"
+          >
+            <img
+              src="/assets/color/Frame 882.jpg"
+              alt="Image 3"
+              class="h-full w-full object-cover filter grayscale transition duration-300 group-hover:grayscale-0"
+            />
+            <div
+              class="absolute inset-0 bg-orange-500 opacity-0 transition-opacity duration-300 group-hover:opacity-0"
+            ></div>
+          </a>
+        </div>
+
+        <!-- Image Block 4 -->
+        <div
+          class="relative flex justify-center items-center h-full bg-gray-200 group"
+        >
+          <a
+            href="#"
+            class="block h-full w-full"
+            onclick="showModal('/assets/color/Frame 883.jpg'); return false;"
+          >
+            <img
+              src="/assets/color/Frame 883.jpg"
+              alt="Image 4"
+              class="h-full w-full object-cover filter grayscale transition duration-300 group-hover:grayscale-0"
+            />
+            <div
+              class="absolute inset-0 bg-orange-500 opacity-0 transition-opacity duration-300 group-hover:opacity-0"
+            ></div>
+          </a>
+        </div>
+
+        <!-- Image Block 5 -->
+        <div
+          class="relative flex justify-center items-center h-full bg-gray-200 group"
+        >
+          <a
+            href="#"
+            class="block h-full w-full"
+            onclick="showModal('/assets/color/Frame 884.jpg'); return false;"
+          >
+            <img
+              src="/assets/color/Frame 884.jpg"
+              alt="Image 5"
+              class="h-full w-full object-cover filter grayscale transition duration-300 group-hover:grayscale-0"
+            />
+            <div
+              class="absolute inset-0 bg-orange-500 opacity-0 transition-opacity duration-300 group-hover:opacity-0"
+            ></div>
+          </a>
+        </div>
+
+        <!-- Image Block 6 -->
+        <div
+          class="relative flex justify-center items-center h-full bg-gray-200 group"
+        >
+          <a
+            href="#"
+            class="block h-full w-full"
+            onclick="showModal('/assets/color/Frame 885.jpg'); return false;"
+          >
+            <img
+              src="/assets/color/Frame 885.jpg"
+              alt="Image 6"
+              class="h-full w-full object-cover filter grayscale transition duration-300 group-hover:grayscale-0"
+            />
+            <div
+              class="absolute inset-0 bg-orange-500 opacity-0 transition-opacity duration-300 group-hover:opacity-0"
+            ></div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Modal component -->
+      <div
+        id="imageModal"
+        class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50"
+        onclick="closeModal()"
+      >
+        <div class="relative">
+          <img
+            id="modalImage"
+            src=""
+            alt="Popup Image"
+            class="max-w-full max-h-[80vh]"
+          />
+          <button
+            onclick="closeModal()"
+            class="absolute top-0 right-0 bg-white text-black p-2 rounded-full"
+          >
+            X
+          </button>
+          <a
+            href="#"
+            class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white bg-black rounded-lg p-2"
+            >Read More</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- pop up -->
+
+    <!-- New Responsive Section -->
+    <div class="bg-[#e3e8eb] flex justify-center text-white">
+      <h2
+        class="absolute lg:-mt-14 text-2xl lg:text-5xl bg-orange-600 flex h-[10vh] lg:h-[14vh] w-full lg:w-[80vw] md:w-[70vw] items-center justify-center mx-auto text-white font-bold text-center"
+      >
+        Simplifying Lending For Bharat
+      </h2>
+    </div>
+
+    <!-- New Section with Orange Background and Text -->
+
+    <div class="bg-[#e3e8eb] h-[12vh]"></div>
+
+    <!-- about us start -->
+    <section id="about" class="text-[#014260] mx-auto relative z-10">
+      <div class="flex lg:flex-row flex-col">
+        <div class="lg:h-auto lg:w-1/2 bg-[#e3e8eb] w-full">
+          <h1
+            class="lg:text-5xl text-2xl flex lg:justify-start justify-center my-5 lg:mx-20 mx-5"
+          >
+            About Us
+          </h1>
+          <div class="lg:mx-20 mx-5 h-auto">
+            <p>
+              KreditVenture, a pioneering NBFC, believes that the MSMEs are the
+              actual backbone of India’s Industrial economy. While they
+              contribute significantly to the country’s GDP, driving innovation
+              & providing millions of livelihoods, we believe that they need to
+              be empowered financially further.
+            </p>
+            <br />
+            <p>
+              Our innovative approach aims to reach out to the remote and
+              underserved areas (Often ignored by traditional banks) and
+              strengthen these micro enterprises with the help of Secured
+              Business Loans (LAP) for their growth, while addressing a
+              <span class="font-bold"> Total Accessible Market (TAM) </span> of
+              INR 20 Lac Crores, which has a penetration of less than 10%.
+            </p>
+          </div>
+          <div
+            class="my-7 lg:mx-36 lg:justify-start justify-center h-auto flex"
+          >
+            <a
+              href="/pages/about.html"
+              type="button"
+              class="text-white bg-[#014260] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-8 py-2.5 text-center mb-0"
+            >
+              Read More
+            </a>
+          </div>
+        </div>
+        <div class="relative bg-[#e3e8eb] lg:h-[80vh] mx-auto lg:w-1/2 w-full">
+          <!-- First Image -->
+          <img
+            src="/assets/enjoying-street-food-fest.jpg"
+            alt=""
+            class="w-full lg:h-[34rem] h-full lg:object-cover object-contain lg:shadow-2xl"
+          />
+
+          <!-- Second Image (Overlapping the first) -->
+          <img
+            src="/assets/chicken-farm-scene-with-poultry-people-(1) copy.jpg"
+            class="hidden lg:block absolute border-l-[.5rem] border-orange-600 top-0 lg:top-0 lg:left-[-3rem] left-[30%] lg:translate-x-0 lg:-translate-x-[50%] lg:h-[40vh] w-[30vh] lg:w-[60vh] z-20 lg:shadow-2xl"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- about us end -->
+
+    <!-- what we offer -->
+    <section class="py-12 mx-auto">
+      <div class="flex flex-col p-10 justify-center items-center">
+        <h2 class="lg:text-4xl text-3xl font-bold text-center">
+          WHAT WE OFFER
+        </h2>
+        <hr class="bg-black mt-5 h-[4px] lg:w-[10vw] w-[50%]" />
+      </div>
+
+      <div
+        class="grid grid-cols-1 lg:grid-cols-3 grid-rows-2 w-auto lg:grid-rows-1"
+      >
+        <div
+          class="bg-[url('/assets/sbl1.jpg')] lg:block hidden w-auto bg-cover ml-6 bg-center rounded-md"
+        ></div>
+        <div
+          class="bg-[url('/assets/sbl1.jpg')] w-full block lg:hidden h-[100%] bg-cover bg-center rounded-md"
+        ></div>
+        <div class="mx-5 pt-5">
+          <!-- Adjusted for more space on the left -->
+          <h3 class="text-2xl font-semibold mb-4 text-left">
+            Secured Business Loans (LAP)
+          </h3>
+
+          <p class="text-gray-700 text-left">
+            Secured business loans provide necessary capital for:
+          </p>
+
+          <ul
+            class="text-gray-700 list-disc list-inside text-left lg:text-left pl-1"
+          >
+            <li class="text-sm">Refinancing existing debt</li>
+            <li class="text-sm">Purchasing property or equipment</li>
+            <li class="text-sm">Improving business operations</li>
+          </ul>
+
+          <p class="text-gray-700 mt-4 text-left lg:text-left">
+            Flexible repayment options help borrowers:
+          </p>
+
+          <ul class="text-gray-700 list-disc list-inside text-left pl-1">
+            <li class="text-sm">Manage financial risks</li>
+            <li class="text-sm">Handle adversities efficiently</li>
+          </ul>
+          <p class="text-gray-700 mt-4 text-left lg:text-left">
+            Ideal for both short-term and long-term needs, supporting:
+          </p>
+          <ul
+            class="text-gray-700 list-disc list-inside text-left lg:text-left pl-1"
+          >
+            <li class="text-sm">Business navigation</li>
+            <li class="text-sm">
+              Strategic initiatives for cash flow and financial stability
+            </li>
+          </ul>
+
+          <div class="flex justify-center lg:justify-start mt-4">
+            <a
+              href="/pages/service.html"
+              type="button"
+              class="text-black ring-1 ring-orange-600 font-medium rounded-full text-sm px-5 py-2.5 text-center"
+            >
+              Know More
+            </a>
+          </div>
+        </div>
+        <div class="lg:block hidden"></div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 lg:grid-cols-3 grid-rows-2 lg:grid-rows-1 py-12 gap-4 mx-auto"
+      >
+        <div
+          class="bg-[url('/assets/ubl.jpg')] lg:hidden w-auto bg-cover bg-left rounded-md"
+        ></div>
+        <div class="hidden lg:block"></div>
+        <div class="lg:pt-8 lg:pb-8 mx-5">
+          <!-- Adjusted for more space on the left -->
+          <h3 class="text-2xl font-semibold mb-4 text-left">
+            Unsecured Business Loans
+          </h3>
+
+          <p class="text-gray-700 text-left">
+            Unsecured business loans available to help small businesses:
+          </p>
+
+          <ul class="text-gray-700 list-disc list-inside text-left">
+            <li class="text-sm">Stay competitive in a fast-paced market</li>
+            <li class="text-sm">Respond quickly to business demands</li>
+          </ul>
+          <p class="text-gray-700 mt-4 text-left">
+            Benefits of our unsecured business loans:
+          </p>
+
+          <ul class="text-gray-700 list-disc list-inside text-left">
+            <li class="text-sm">Quick access to funds</li>
+            <li class="text-sm">
+              Fast turnaround time for meeting business needs
+            </li>
+          </ul>
+
+          <div class="flex justify-center lg:justify-start mt-4">
+            <a
+              href="/pages/service.html"
+              type="button"
+              class="text-black ring-1 ring-orange-600 font-medium rounded-full text-sm px-5 py-2.5 text-center"
+            >
+              Know More
+            </a>
+          </div>
+        </div>
+        <div
+          class="bg-[url('/assets/ubl.jpg')] lg:block hidden w-auto bg-cover bg-left rounded-md"
+        ></div>
+      </div>
+    </section>
+    <!-- what we offer end -->
+
+    <!-- quick banner orange start -->
+    <section
+      class="h-auto lg:h-[30vh] bg-[#f26530] mx-auto py-10 flex flex-col md:flex-row items-center justify-around"
+    >
+      <!-- Icon and text for larger screens, hidden on small screens -->
+      <div class="hidden lg:flex flex-row items-center md:mb-0">
+        <img
+          src="/assets/Layer-15.png"
+          alt="Loan Icon"
+          class="icon h-[7rem] mx-14 w-[7rem]"
+        />
+      </div>
+
+      <!-- Vertical line separator visible on medium screens and up -->
+      <div class="border-l border-white h-12 mx-4 hidden md:block"></div>
+
+      <!-- Quick & Easy Loan Approvals -->
+      <div class="flex flex-row items-center mb-4 md:mb-0">
+        <img
+          src="/assets/6017801-200.png"
+          alt="Loan Icon"
+          class="icon h-15 w-15"
+        />
+        <span class="ml-2 text-white text-sm md:text-base"
+          >QUICK & EASY LOAN APPROVALS</span
+        >
+      </div>
+
+      <!-- Vertical line separator visible on medium screens and up -->
+      <div class="border-l border-white h-12 mx-4 hidden md:block"></div>
+
+      <!-- Easy Access to Funds -->
+      <div class="flex flex-row items-center mb-4 md:mb-0">
+        <img
+          src="/assets/6017801-200.png"
+          alt="Access Icon"
+          class="icon h-15 w-15"
+        />
+        <span class="ml-2 text-white text-sm md:text-base"
+          >EASY ACCESS TO FUNDS</span
+        >
+      </div>
+
+      <!-- Vertical line separator visible on medium screens and up -->
+      <div class="border-l border-white h-12 mx-4 hidden md:block"></div>
+
+      <!-- Flexible Repayment Options -->
+      <div class="flex flex-row items-center mb-4 md:mb-0">
+        <img
+          src="/assets/6017801-200.png"
+          alt="Flexible Icon"
+          class="icon h-15 w-15"
+        />
+        <span class="ml-2 text-white text-sm md:text-base"
+          >FLEXIBLE REPAYMENT OPTIONS</span
+        >
+      </div>
+    </section>
+    <!-- quick banner orange end -->
+
+    <!-- loan types start -->
+    <!-- <section
+      class="bg-[url('/')] py-10 lg:py-12 h-auto bg-contain bg-center flex flex-col justify-center items-center p-4 text-center"
+    >
+      
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl items-center text-center px-4 lg:h-[70vh]"
+      >
+        
+        <div
+          class="p-4 bg-[#fafafa] rounded-lg lg:h-[60vh] shadow-lg flex flex-col justify-center border-b-4 border-orange-600"
+        >
+          <img src="/assets/Layer-5-copy.png" class="w-20 h-20 mb-4 mx-auto" />
+          <h3 class="text-2xl font-bold mb-4">Business Expansion Loan</h3>
+          <p class="text-gray-600">
+            Experience rapid loan approvals tailored to industrial needs.
+          </p>
+        </div>
+
+        
+        <div
+          class="bg-[#fafafa] p-4 rounded-lg lg:h-[60vh] shadow-lg flex flex-col justify-center border-b-4 border-orange-600"
+        >
+          <img src="/assets/Layer-29.png" class="w-20 h-20 mb-4 mx-auto" />
+          <h3 class="text-2xl font-bold mb-4">Startup Business Loan</h3>
+          <p class="text-gray-600">
+            Get guidance from industry experts at every step of the process.
+          </p>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- loan option start -->
+    <section
+      class="py-12 lg:h-[50vh] h-auto bg-[#003c58] flex justify-center items-center flex-col p-4 lg:p-0"
+    >
+      <h2 class="text-white text-3xl lg:text-5xl text-center mb-8">
+        Begin Your Loan Process Here
+      </h2>
+      <div
+        class="bg-white w-full p-4 shadow-lg lg:w-[70vw] lg:max-w-5xl flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0"
+      >
+        <!-- Name Input with Divider -->
+        <div class="flex items-center w-full lg:flex-1">
+          <input
+            type="text"
+            class="border-none outline-none p-2 w-full rounded-lg"
+            placeholder="Name"
+          />
+        </div>
+
+        <!-- Divider for large screens -->
+        <div class="hidden lg:block lg:h-full lg:w-px lg:bg-gray-300"></div>
+
+        <!-- Number Input with Divider -->
+        <div class="flex items-center w-full lg:flex-1">
+          <input
+            type="number"
+            class="border-none outline-none p-2 w-full rounded-lg"
+            placeholder="Number"
+          />
+        </div>
+
+        <!-- Divider for large screens -->
+        <div class="hidden lg:block lg:h-full lg:w-px lg:bg-gray-300"></div>
+
+        <!-- Loan Type Select with Divider -->
+        <div class="flex items-center w-full lg:flex-1">
+          <select class="border-none outline-none p-2 w-full rounded-lg">
+            <option value="">Loan type</option>
+            <option value="personal">Secured Loan (LAP)</option>
+            <option value="personal">Unsecured</option>
+          </select>
+        </div>
+
+        <!-- Divider for large screens -->
+        <div class="hidden lg:block lg:h-full lg:w-px lg:bg-gray-300"></div>
+
+        <!-- Apply Button -->
+        <a href="" class="w-full lg:w-auto px-4 py-3 text-white bg-[#003c58]">
+          Get A Call
+        </a>
+      </div>
+    </section>
+    <!-- loan option end -->
+
+    <!-- our team start-->
+    <div class="relative p-4 lg:py-12 my-10 mb-0 mx-auto">
+      <!-- Decorative accents -->
+      <div
+        class="lg:absolute lg:inset-y-0 lg:left-0 lg:bg-orange-600 lg:w-20"
+        style="clip-path: polygon(0 0, 100% 21%, 100% 81%, 0% 100%)"
+      ></div>
+      <!-- Right Decorative Accent with Clip-Path -->
+      <div
+        class="lg:absolute lg:inset-y-0 lg:right-0 -rotate-180 lg:bg-orange-600 lg:w-20"
+        style="clip-path: polygon(0 0, 100% 21%, 100% 81%, 0% 100%)"
+      ></div>
+
+      <!-- Title -->
+      <h2
+        class="text-center text-4xl md:text-5xl font-bold mb-10 text-black lg:mb-10"
+      >
+        Meet Our Team
+      </h2>
+
+      <div
+        class="grid mb-10 grid-cols-1 md:grid-cols-2 lg:gap-0 gap-4 lg:grid-cols-3 lg:max-w-5xl mx-auto text-center justify-center text-white"
+      >
+        <div class="card-container">
+          <div class="card">
+            <div class="card-front">
+              <img
+                src="/Layer-16.png"
+                alt="Saif Hasan"
+                class="w-40 h-40 rounded-full mb-4"
+              />
+              <h3 class="text-lg font-semibold">Saif Hasan</h3>
+              <p class="text-sm mb-4">FOUNDER & CEO</p>
+              <div class="flex flex-row space-x-4">
+                <span
+                  class="bg-transparent border border-white text-white py-1 px-4 rounded-full text-sm mb-2"
+                  >Read More
+                </span>
+                <a
+                  href="https://www.linkedin.com/in/saif-hasan-116114b9/"
+                  class="text-teal-200"
+                >
+                  <i
+                    class="cursor-pointer fab fa-linkedin-in text-orange-600 p-2 lg:mb-2 bg-white rounded-full"
+                  ></i>
+                </a>
+              </div>
+            </div>
+            <div class="card-back">
+              <p class="text-white text-center text-xs">
+                Saif Hasan has more than 20 years of Sales and Strategic
+                Alliances experience with Consumer Banks and a Private Wealth
+                Firm. He was Director with IIFL Wealth. Prior to IIFL, he used
+                to head Citibank consumer branches in Mumbai, leading large
+                teams on Liabilities, Assets, Insurance, Wealth, and Operations.
+                He Co-Founded a Fintech startup KreditServe focused on B2B
+                Supply Chain. Saif is a Post-Graduate in Business Economics
+                (MBE) from University of Delhi and a Graduate in Commerce from
+                BHU.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/saif-hasan-116114b9/"
+                class="text-teal-200 mt-4"
+              >
+                <i
+                  class="cursor-pointer fab fa-linkedin-in text-orange-600 p-2 lg:mb-2 bg-white rounded-full"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <div class="card-front">
+              <img
+                src="/Layer-17.png"
+                alt="Saif Hasan"
+                class="w-40 h-40 rounded-full mb-4"
+              />
+              <h3 class="text-lg font-semibold">Jaspreet Singh</h3>
+              <p class="text-sm mb-4">CO-FOUNDER</p>
+              <div class="flex flex-row space-x-4">
+                <span
+                  class="bg-transparent border border-white text-white py-1 px-4 rounded-full text-sm mb-2"
+                >
+                  Read More
+                </span>
+                <a
+                  href="https://www.linkedin.com/in/jaspreetsinghjs/"
+                  class="text-teal-200"
+                >
+                  <i
+                    class="cursor-pointer fab fa-linkedin-in text-orange-600 p-2 lg:mb-2 bg-white rounded-full"
+                  ></i>
+                </a>
+              </div>
+            </div>
+            <div class="card-back">
+              <p class="text-white text-center text-xs">
+                Jaspreet has over 16 years of experience and a proven track
+                record in Transaction Banking Sales, Trade Finance and Supply
+                Chain Finance (SCF) Product, Solution Advisory. He has led
+                Product Sales teams across Large Multinational & Indian Banks
+                like HSBC, SCB & Axis, Enterprise Sales stints for a large
+                global fintech organizations-C2FO & setup the SCF and SME
+                business for NBFC-Arthmate. Jaspreet holds a B Tech degree from
+                DCE and an MBA from IIFT, Delhi.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/jaspreetsinghjs/"
+                class="text-teal-200 mt-4"
+              >
+                <i
+                  class="cursor-pointer fab fa-linkedin-in text-orange-600 p-2 lg:mb-2 bg-white rounded-full"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <div class="card-front">
+              <img
+                src="/Layer-18.png "
+                alt="Saif Hasan"
+                class="w-40 h-40 rounded-full mb-4 text-xl"
+              />
+              <h3 class="text-lg font-semibold">Prajit Chandrasekhar</h3>
+              <p class="text-sm mb-4">FOUNDING PARTNER</p>
+              <div class="flex flex-row space-x-4">
+                <span
+                  class="bg-transparent border border-white text-white py-1 px-4 rounded-full text-sm mb-2"
+                >
+                  Read More
+                </span>
+                <a
+                  href="https://www.linkedin.com/in/prajitc/"
+                  class="text-teal-200"
+                >
+                  <i
+                    class="cursor-pointer fab fa-linkedin-in text-orange-600 p-2 lg:mb-2 bg-white rounded-full"
+                  ></i>
+                </a>
+              </div>
+            </div>
+            <div class="card-back text-center text-xs">
+              Prajit brings over 20 years of experience in corporate banking,
+              investment banking, and fintech platforms. He previously served as
+              the COO of Morgan Stanley’s Global Research Operations team in
+              Mumbai and led operations at RXIL (TReDS platform). Prajit also
+              founded his own tech startup in the Middle East and worked with a
+              couple of new-age lending fintech startups contributing to
+              business operations and product. He holds an MBA degree from the
+              Indian School of Business (ISB).
+              <a
+                href="https://www.linkedin.com/in/prajitc/"
+                class="text-teal-200 mt-4"
+              >
+                <i
+                  class="cursor-pointer fab fa-linkedin-in text-orange-600 p-2 lg:mb-2 bg-white rounded-full"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- our team end-->
+
+    <!-- testimonial section start -->
+    <!-- <section
+      class="bg-[#eae9e7] lg:my-12 py-12 my-10 lg:h-auto bg-[url('/page01_parallax01.png')]"
+    >
+      <div
+        class="max-w-screen-xl px-4 mx-auto flex justify-center text-center lg:py-4 lg:px-6"
+      >
+        <div
+          class="lg:h-[50vh] h-[40vh] w-full lg:w-[50vw] flex justify-center"
+        >
+          <div id="testimonial-container" class="relative" touch-action="pan-y">
+            <figure
+              class="max-w-screen-md mx-auto transition-opacity duration-500"
+              id="testimonial-card"
+            >
+              <svg
+                class="h-20 mx-auto mb-4 -rotate-180 text-gray-400"
+                viewBox="0 0 24 27"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                  fill="#014260"
+                />
+              </svg>
+              <blockquote>
+                <p
+                  class="lg:text-2xl text-xl font-medium text-[#014260] break-words"
+                  id="testimonial-quote"
+                >
+                  "Your testimonial quote here."
+                </p>
+              </blockquote>
+              <figcaption
+                class="flex items-center justify-center mt-6 space-x-3"
+              >
+                <img
+                  id="testimonial-img"
+                  class="w-12 h-12 rounded-full"
+                  alt="profile picture"
+                  src="/assets/6017801-200.png"
+                />
+                <div
+                  class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700"
+                >
+                  <div
+                    id="testimonial-author"
+                    class="pr-3 font-medium text-[#014260]"
+                  >
+                    Author Name
+                  </div>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-around py-6">
+        <button id="prev-button" class="px-10 py-1 text-black rounded">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button id="next-button" class="px-10 py-1 text-black rounded">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section> -->
+    <!-- testimonial section end -->
+    <hr class="h-20 w-full py-10" />
+    <!-- blog section start -->
+    <section
+      class="relative lg:h-screen mx-auto lg:mt-0 px-4 bg-cover bg-center"
+    >
+      <!-- Left flipped background -->
+      <div
+        class="xs:hidden lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/3 lg:bg-cover lg:bg-no-repeat"
+        style="
+          background-image: url(/assets/Layer-31.png);
+          transform: scaleY(1);
+        "
+      ></div>
+
+      <!-- Blog section content -->
+      <div class="relative mx-auto lg:pb-0 pb-10 lg:px-72">
+        <h2 class="lg:text-5xl text-3xl text-black font-bold text-center pb-10">
+          News From Our Latest Blog
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 z-10 relative">
+          <!-- blog card start -->
+          <a href="/pages/blog/blog1.html">
+            <div
+              class="bg-white rounded-lg lg:h-[70vh] shadow-md pb-10 overflow-hidden"
+            >
+              <img
+                src="/assets/empowered-indian-dairy-farmer-with-cattle-promoting-village-leadership.png"
+                alt="Woman with a cow"
+                class="w-full h-[35vh]"
+              />
+              <div class="p-4">
+                <p class="text-gray-700 text-sm mb-2">November 4, 2024</p>
+                <h3 class="text-xl font-bold mb-2">
+                  How Small Finance is Fueling Landmark Growth in India’s Dairy
+                  Industry – A KreditVenture Perspective.
+                </h3>
+              </div>
+            </div>
+          </a>
+          <!-- blog card end -->
+
+          <!-- blog card start -->
+          <a href="/pages/blog/blog1.html">
+            <div
+              class="bg-white rounded-lg lg:h-[70vh] shadow-md overflow-hidden"
+            >
+              <img
+                src="/assets/8aceda335ecd3432354c005158d21f8a.png"
+                alt="Woman with a cow"
+                class="w-full h-[35vh]"
+              />
+              <div class="p-4">
+                <p class="text-gray-700 text-sm mb-2">November 14, 2024</p>
+                <h3 class="text-xl font-bold mb-2">
+                  Clothing Industry Sees Jump In Their Sales With Small Finance
+                </h3>
+              </div>
+            </div>
+          </a>
+          <!-- blog card end -->
+        </div>
+      </div>
+    </section>
+    <!-- blog section end -->
+
+    <!-- footer start -->
+    <footer
+      class="bg-[#014260] text-white lg:h-auto bg-center bg-cover lg:hidden block"
+    >
+      <div class="mx-auto">
+        <!-- Logo and Tagline -->
+        <div
+          class="flex lg:h-[15vh] bg-black lg:w-full w-[50vw] lg:justify-start bg-transparent justify-center mx-auto lg:mt-0"
+        >
+          <img
+            src="/assets/logo kredit venture white.png"
+            class="pt-2"
+            alt=""
+          />
+        </div>
+
+        <!-- Navigation Links -->
+        <hr
+          class="lg:w-[56vw] lg:flex my-4 h-[1px] mx-2 lg:mx-auto bg-white lg:justify-center border-0"
+        />
+
+        <nav
+          class="flex flex-col lg:flex-row lg:justify-evenly justify-center lg:mx-36"
+        >
+          <div class="text-center text-xs my-1">
+            <a href="/" class="mx-1">Home</a> |
+            <a href="/pages/about.html" class="mx-1">About US</a> |
+            <a href="/pages/service.html" class="mx-1">Our Products</a> |
+            <a href="/pages/blog.html" class="mx-1">Blogs</a> |
+            <a href="/pages/contact.html" class="mx-1">Contact Us</a> |
+            <a href="/pages/privacy.html" class="mx-1">Privacy Policy</a>
+          </div>
+          <div class="flex justify-center my-1 lg:my-0 space-x-1">
+            <a href="Simplifying"
+              ><img
+                src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
+                alt="Instagram"
+                class="w-6 h-6"
+            /></a>
+            <a href="https://www.facebook.com/kreditventure"
+              ><img
+                src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
+                alt="Facebook"
+                class="w-6 h-6"
+            /></a>
+            <a href="https://x.com/KreditVenture"
+              ><img
+                src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=ffffff"
+                alt="X"
+                class="w-6 h-6"
+            /></a>
+            <a href="https://www.youtube.com/channel/UCzdw1BEG7c_IbGBkUsJnnHg"
+              ><img
+                src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png"
+                alt="YouTube"
+                class="w-6 h-6"
+            /></a>
+            <a href="https://www.linkedin.com/company/kreditventure"
+              ><img
+                src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
+                alt="LinkedIn"
+                class="w-6 h-6"
+            /></a>
+          </div>
+        </nav>
+
+        <hr
+          class="lg:w-[56vw] my-4 h-[1px] mx-3 lg:mx-auto bg-white border-0"
+        />
+
+        <!-- png layer -->
+        <div class="flex justify-center flex-col">
+          <p class="text-center text-sm flex flex-col">
+            <span>
+              Kredit Venture (Jads Services Private Limited) NBFC Registration
+              No: N-14 03239
+            </span>
+          </p>
+          <img src="/assets/Layer-1-copy-2.png" alt="" />
+        </div>
+        <!-- png layer -->
+      </div>
+    </footer>
+
+    <footer
+      class="hidden lg:block bg-[#014260] text-white lg:h-auto bg-center bg-cover"
+    >
+      <div
+        class="flex flex-row justify-center w-full gap-4 mx-auto items-center py-5"
+      >
+        <div class="">
+          <img
+            src="/assets/logo kredit venture white.png"
+            class="h-20 w-auto"
+            alt=""
+          />
+        </div>
+
+        <div class="flex flex-col">
+          <div class="flex flex-row justify-between w-full">
+            <div class="text-sm flex flex-row justify-center">
+              <a href="/" class="mx-1 hover:text-blue-400 transition">Home</a>
+              <span>|</span>
+              <a
+                href="/pages/about.html"
+                class="mx-1 hover:text-blue-400 transition"
+                >About Us</a
+              >
+              <span>|</span>
+              <a
+                href="/pages/service.html"
+                class="mx-1 hover:text-blue-400 transition"
+                >Our Products</a
+              >
+              <span>|</span>
+              <a
+                href="/pages/blog.html"
+                class="mx-1 hover:text-blue-400 transition"
+                >Blogs</a
+              >
+              <span>|</span>
+              <a
+                href="/pages/contact.html"
+                class="mx-1 hover:text-blue-400 transition"
+                >Contact Us</a
+              >
+              <span>|</span>
+              <a
+                href="/pages/privacy.html"
+                class="mx-1 hover:text-blue-400 transition"
+                >Privacy Policy</a
+              >
+            </div>
+            <div class="flex justify-center gap-1 lg:mt-0">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
+                  alt="Instagram"
+                  class="w-6 h-6 hover:opacity-70 transition"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/kreditventure"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
+                  alt="Facebook"
+                  class="w-6 h-6 hover:opacity-70 transition"
+                />
+              </a>
+              <a
+                href="https://x.com/KreditVenture"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=ffffff"
+                  alt="X"
+                  class="w-6 h-6 hover:opacity-70 transition"
+                />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCzdw1BEG7c_IbGBkUsJnnHg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png"
+                  alt="YouTube"
+                  class="w-6 h-6 hover:opacity-70 transition"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/kreditventure"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
+                  alt="LinkedIn"
+                  class="w-6 h-6 hover:opacity-70 transition"
+                />
+              </a>
+            </div>
+          </div>
+
+          <hr
+            class="lg:w-[56vw] h-[1px] mx-3 my-2 lg:mx-auto bg-white border-0"
+          />
+          <span class="hidden lg:block text-center text-sm">
+            Kredit Venture (Jads Services Private Limited) NBFC Registration No:
+            N-14 03239
+          </span>
+        </div>
+      </div>
+
+      <!-- png layer -->
+      <div class="flex justify-center flex-col">
+        <p class="text-center text-sm flex flex-col">
+          <span class="lg:hidden block">
+            Kredit Venture (Jads Services Private Limited) NBFC Registration No:
+            N-14 03239
+          </span>
+        </p>
+        <img src="/assets/Layer-1-copy-2.png" alt="" />
+      </div>
+      <!-- png layer -->
+    </footer>
+
+    <!-- footer end -->
+
+    <script src="/script.js"></script>
+  </body>
+</html>
